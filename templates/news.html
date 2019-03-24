@@ -1,0 +1,15 @@
+{% extends 'layout.html' %} {% block body %} {% for article in articles %}
+<div class="media-object stack-for-small">
+    <div class="media-object-section">
+        <div class="thumbnail">
+            <img src="{{article.image}}">
+        </div>
+    </div>
+    <div class="media-object-section">
+
+        <h4>{{article.title}}</h4>
+        <p>{{article.body | safe}}</p>
+
+    </div>
+</div>
+{% endfor %} {% endblock %}

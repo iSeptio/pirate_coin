@@ -1,0 +1,31 @@
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+
+<div class="callout {{ category }}" data-closable>
+    <h5>{{ message }} </h5>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %} {% endif %} {% endwith %} {% if error %}
+<div class="callout alert" data-closable>
+    <h5>{{ error }} </h5>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %} {% if msg %}
+<div class="callout secondary" data-closable>
+    <h5>{{ msg }} </h5>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %} {% if mined %}
+<div class="callout success" data-closable>
+    <h5>{{mined.message}}: {{mined.index}}. Transactions: {{mined.transactions}} Proof: {{mined.proof}} Previous hash: {{mined.previous_hash}}
+    </h5>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %}

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="media-object stack-for-small">
+    <div class="media-object-section">
+        <div class="thumbnail">
+            <img src="{{article.image}}">
+        </div>
+    </div>
+    <div class="media-object-section">
+
+        <h2>{{article.title}}</h2>
+        <hr>
+        <h4>Written by {{article.author}} on {{article.create_date}}</h4>
+        <hr>
+        <p>{{article.body | safe}}</p>
+
+    </div>
+</div>
+{% endblock %}

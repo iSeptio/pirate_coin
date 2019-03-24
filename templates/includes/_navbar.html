@@ -1,0 +1,45 @@
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Learn Blockchain</li>
+      <li>
+        <a href="news">News</a>
+      </li>
+      <li>
+        <a href="mine">Mine</a>
+      </li>
+      <li>
+        <a href="explorer">Explorer</a>
+      </li>
+      <li>
+        <a href="tx">Send transaction</a>
+      </li>
+      <li>
+        <a href="donate">Donate</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="top-bar-right">
+    <ul class="menu">
+
+      {% if session.logged_in %}
+      <li>
+        <a href="logout">Log Out</a>
+      </li>
+      <li>
+        <a href="dashboard">dashboard</a>
+      </li>
+      {% else %}
+      <li>
+        <a href="login">Log In</a>
+      </li>
+      <li>
+        <a href="register">Register</a>
+      </li>
+      {% endif %}
+    </ul>
+
+  </div>
+</div>
